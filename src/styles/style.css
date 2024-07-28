@@ -1,0 +1,290 @@
+:root {
+  --font-color: #333;
+  --background-color: #eee;
+}
+ 
+[data-theme='dark'] {
+  --font-color: #eee;
+  --background-color: #333;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: background 0.3s ease-in;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.note-app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.note-app__header {
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+}
+
+.note-app__header h1 {
+  font-weight: normal;
+  font-size: 32px;
+  flex: 1;
+}
+
+button {
+  background: transparent;
+  color: var(--font-color);
+  font-size: 48px;
+  border: 0;
+  cursor: pointer;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+}
+
+.navigation ul li,
+.edit ul li {
+  display: inline-block;
+  padding: 16px;
+}
+
+.navigation ul li a,
+.edit ul li a {
+  font-size: 28px;
+  color: black;
+}
+
+.navigation ul li button {
+  background-color: transparent;
+  font-family: 'Inter', sans-serif;
+  border: 0;
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit ul li:hover {
+  background-color: #d2d2d2;
+}
+
+h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p.note-body {
+  font-size: 20px;
+  text-align: center;
+  padding: 0 100px;
+}
+
+p.created-at {
+  font-size: 18px;
+  text-align: center;
+  color: #808080;
+}
+
+.note-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin: 24px 0;
+  border: 2px solid black;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.note-item__body {
+  flex: 1;
+  font-weight: normal;
+  font-size: 24px;
+  text-align: center; 
+  margin-left: 8px;
+  padding-left: 8px;
+  border-left: 1px solid #aaa;
+}
+
+.note-item__title {
+  font-weight: normal;
+  font-size: 24px;
+  flex: 1;
+  text-align: center;
+  padding: 4px 0;
+}
+
+.note-item__link {
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.note-item__createdAt {
+  font-size: 16px;
+  color: #808080;
+  margin-top: 8px;
+  text-align: center; 
+}
+
+.note-item__delete {
+  padding: 8px;
+  font-size: 28px;
+  color: red;
+  background-color: transparent;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.note-input {
+  border: 2px solid black;
+  padding: 16px;
+  margin: 14px 0;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
+.note-input input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.note-input button {
+  width: 100%;
+  padding: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.hidden-title {
+  visibility: hidden;
+  color: transparent;
+}
+
+.search-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.search-page h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.search-page .search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  background-color: #f5f5f5;
+  border-radius: 25px;
+}
+
+.search-page .search-bar input[type='text'] {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+}
+
+.search-page .search-bar button {
+  padding: 15px 25px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-page .search-bar button:hover {
+  background-color: #45a049;
+}
+
+.search-page .note-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.search-page .note-item {
+  width: 800px;
+  margin: 20px;
+  text-align: center; 
+}
+
+.login-page h2, .register-page h2 {
+  font-weight: normal;
+}
+ 
+.login-input, .register-input, .contact-input {
+  margin-top: 16px;
+}
+ 
+.login-input input, .register-input input, .contact-input input {
+  display: block;
+  padding: 16px;
+  width: 100%;
+  margin: 8px 0;
+  font-size: 24px;
+  background-color: transparent;
+  border: 2px dashed black;
+  border-radius: 8px;
+}
+ 
+.login-input button, .register-input button, .contact-input button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  font-size: 24px;
+  background-color: tan;
+  border: 2px dashed black;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+p {
+  font-size: 32px;
+}
+
+@media (max-width: 768px) {
+  .search-page .note-item {
+    width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .search-page .note-item {
+    width: calc(100% - 40px);
+  }
+}
